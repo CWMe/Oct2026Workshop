@@ -1,0 +1,9 @@
+Build a Code With Me Community Website
+Build a modern, professional, responsive website for Code With Me, a technology community based in Northern Virginia and Washington, DC.
+Existing community: https://www.meetup.com/code-with-me/
+Motto: Smarter Together.
+About Code With Me
+Founded in 2017, Code With Me brings developers, software engineers, DevOps professionals, cloud engineers, and technology enthusiasts together to learn, build, and grow.
+We primarily organize in-person technology meetups across Northern Virginia and Washington, DC, collaborating with companies such as Amazon Web Services and other technology organizations to host technical talks, workshops, live coding sessions, debugging exercises, and networking events.
+Our mission is to make technical learning accessible, collaborative, and free.
+Use publicly available information from our Meetup page to understand our community, events, and history.
