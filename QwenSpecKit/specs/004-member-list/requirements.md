@@ -16,7 +16,7 @@
 
 ## Requirement Completeness
 
-- [ ] No [NEEDS CLARIFICATION] markers remain — 3 remain, all policy
+- [x] No [NEEDS CLARIFICATION] markers remain — 3 remain, all policy
   decisions only the organizers can make:
   1. Retention for members who leave the Meetup group (Story 4 / FR-009)
   2. Who qualifies as an admin (FR-011)

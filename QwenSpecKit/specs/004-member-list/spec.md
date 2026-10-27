@@ -8,6 +8,14 @@
 
 **Input**: User description: "Create a member list for Code With Me that lives outside Meetup. It must be available only to admins. It must hold all the member information available to Meetup organizers, plus when each member last attended a meetup. This is the first step toward Code With Me existing independently of any single event platform (Meetup, Luma, Eventbrite, etc.) while still being able to post events across several of them."
 
+## Clarifications
+
+### Session 2026-07-17
+
+- Q: What happens to a member's directory record after they leave the Meetup group? → A: Keep the record for a fixed 12-month retention period (from the "left" detection date) then automatically delete it, with the deletion audit-logged.
+- Q: Who is eligible to be an admin of the member directory? → A: A named roster maintained by owners, regardless of Meetup role (Meetup roles are neither required nor sufficient).
+- Q: How should members be notified about the directory and how to ask for removal? → A: A notice in the Meetup group description plus a permanent privacy page on the Code With Me site (no individual member messages).
+
 ## User Scenarios & Testing *(mandatory)*
 
 ### User Story 1 - Bring the member list home (Priority: P1)
@@ -140,11 +148,9 @@ two files.
    re-import runs, **Then** those admin-authored fields are unchanged.
 3. **Given** a member is in the directory but absent from the latest export,
    **When** the import completes, **Then** the member is marked "No longer in
-   Meetup group" with the date it was detected, and is then handled according
-   to the retention rule [NEEDS CLARIFICATION: retention for members who leave
-   the Meetup group — (a) keep indefinitely with "left" status, (b) keep for a
-   fixed period (e.g., 12 months) then delete automatically, or (c) delete at
-   the next import].
+   Meetup group" with the date it was detected, is retained for the 12-month
+   retention period (from the detection date), and is then automatically
+   deleted, with the automatic deletion audit-logged.
 4. **Given** an export older than the one last imported, **When** it is
    imported, **Then** no member's last-attended date moves backward.
 
@@ -233,16 +239,18 @@ confirm they do not reappear.
 - **FR-008**: Admin-authored fields (notes, tags) MUST never be overwritten
   or cleared by an import.
 - **FR-009**: Members absent from the latest export MUST be marked "No longer
-  in Meetup group" with the detection date and then handled per the
-  retention rule in Story 4.
+  in Meetup group" with the detection date; their record MUST be retained for
+  a fixed 12-month retention period measured from the detection date, after
+  which it MUST be deleted automatically and the deletion audit-logged. Manual
+  deletion on request (FR-016) MUST remain available at any time.
 - **FR-010**: Only signed-in admins MUST be able to view, import, edit,
   export, or delete member data. Everyone else MUST receive no member data,
   including names and counts.
-- **FR-011**: The admin roster MUST be changeable only by people with an
-  owner role, and there MUST always be at least one owner. Admins are
-  [NEEDS CLARIFICATION: who qualifies as an admin — (a) every Meetup
-  organizer and co-organizer, (b) organizers plus event hosts, or (c) a named
-  list the owners maintain regardless of Meetup role].
+- **FR-011**: The admin roster MUST be a named list maintained by people with an
+  owner role (Meetup organizer/role is neither required nor sufficient for
+  admin access); the roster MUST be changeable only by owners, there MUST
+  always be at least one owner, and removal MUST take effect immediately —
+  the person's next directory request MUST be denied (Story 2 AS3).
 - **FR-012**: Admin sign-in MUST require multi-factor authentication, and
   sessions MUST end after a period of inactivity.
 - **FR-013**: The system MUST keep an audit log of sign-ins, list views,
@@ -269,10 +277,11 @@ confirm they do not reappear.
   directory. Export (FR-015) is the only way data leaves the system.
 - **FR-019**: Members MUST be informed that organizers keep their Meetup
   member information in a Code With Me directory outside Meetup, and how to
-  ask to be removed [NEEDS CLARIFICATION: how members are notified — (a) a
-  notice in the Meetup group description plus a privacy page on the Code With
-  Me site, (b) a one-time Meetup message to all members plus the privacy
-  page, or (c) the privacy page only].
+  ask to be removed, via (a) a notice in the Meetup group description and
+  (b) a permanent privacy page on the Code With Me site that names the
+  directory, states what is stored, the 12-month retention rule for members
+  who leave the group (FR-009), and the exact way to ask for removal
+  (FR-016). No individual member messages are required.
 - **FR-020**: All dates and times MUST be shown in US Eastern with an explicit
   time-zone label, consistent with the rest of the site.
 
