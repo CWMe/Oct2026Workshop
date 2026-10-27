@@ -1,0 +1,13 @@
+# Agent session artifacts (may contain credentials/tokens — keep out of git)
+.pi/
+!.pi/prompts/
+!.pi/skills/
+!.pi/commands/
+!.pi/extensions/
+!.pi/settings.json
+!.pi/agent/
+
+# OS / temp
+.DS_Store
+Thumbs.db
+*.tmp
