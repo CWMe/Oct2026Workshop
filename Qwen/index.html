@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Code With Me — Smarter Together | Northern Virginia &amp; Washington, DC Tech Community</title>
+  <meta name="description" content="Code With Me is a free technology community in Northern Virginia and Washington, DC. In-person meetups, technical talks, workshops, live coding, and networking — Smarter Together." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⌨️</text></svg>" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header class="site-header" id="top">
+    <div class="container nav-inner">
+      <a href="#top" class="brand" aria-label="Code With Me home">
+        <span class="brand-mark" aria-hidden="true"><code>&lt;/&gt;</code></span>
+        <span class="brand-text">Code&nbsp;With&nbsp;Me</span>
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#what-we-do" class="nav-link">What We Do</a>
+        <a href="#events" class="nav-link">Events</a>
+        <a href="#partners" class="nav-link">Partners</a>
+        <a href="#get-involved" class="nav-link">Get Involved</a>
+        <a href="https://www.meetup.com/code-with-me/" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Join on Meetup</a>
+      </nav>
+
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span class="pulse-dot" aria-hidden="true"></span> Est. 2017 · Northern Virginia &amp; Washington, DC</p>
+          <h1>Where developers <span class="grad-text">learn, build, and grow</span> — together.</h1>
+          <p class="lead">
+            Code With Me is a free, in-person technology community bringing developers,
+            software engineers, DevOps and cloud engineers, and tech enthusiasts across
+            Northern Virginia and Washington, DC to swap ideas, sharpen skills, and make
+            meaningful connections.
+          </p>
+          <div class="hero-cta">
+            <a href="https://www.meetup.com/code-with-me/" class="btn btn-primary" target="_blank" rel="noopener">
+              Join Our Community
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#events" class="btn btn-ghost">See Upcoming Events</a>
+          </div>
+          <dl class="hero-stats">
+            <div><dt>2017</dt><dd>Founded</dd></div>
+            <div><dt>12+</dt><dd>Partner companies</dd></div>
+            <div><dt>Free</dt><dd>Every event, forever</dd></div>
+          </dl>
+        </div>
+
+        <div class="hero-visual reveal" aria-hidden="true">
+          <div class="code-window" data-tilt>
+            <div class="code-window-bar">
+              <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+              <span class="code-window-title">community.js</span>
+            </div>
+            <pre class="code-body"><span class="c-com">/** Code With Me — est. 2017, NoVA &amp; DC */</span>
+<span class="c-kw">const</span> community = {
+  motto:    <span class="c-str">"Smarter Together"</span>,
+  region:   [<span class="c-str">"Northern Virginia"</span>, <span class="c-str">"Washington, DC"</span>],
+  vibe:     <span class="c-str">"kind, curious, collaborative"</span>,
+  sponsors: <span class="c-kw">new</span> Map([
+    [<span class="c-str">"AWS"</span>, <span class="c-str">"partnerships"</span>],
+  ]),
+};
+
+<span class="c-kw">async function</span> <span class="c-fn">gather</span>(people) {
+  <span class="c-kw">await</span> learn(people);
+  <span class="c-kw">await</span> build(people);
+  <span class="c-kw">return</span> grow(people); <span class="c-com">// → Smarter Together 🚀</span>
+}</pre>
+          </div>
+          <div class="float-chip chip-1">💬 Tech talks</div>
+          <div class="float-chip chip-2">🛠️ Workshops</div>
+          <div class="float-chip chip-3">🤝 Networking</div>
+        </div>
+      </div>
+
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>Smarter Together ✦ In-Person ✦ Free ✦ Pair Programming ✦ Cloud &amp; DevOps ✦ Kindness Culture ✦ Learn &amp; Teach ✦ Community First </span>
+          <span>Smarter Together ✦ In-Person ✦ Free ✦ Pair Programming ✦ Cloud &amp; DevOps ✦ Kindness Culture ✦ Learn &amp; Teach ✦ Community First </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-eyebrow">About Us</p>
+          <h2>More than a meetup — a <span class="grad-text">movement</span> to level up together.</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card wide reveal">
+            <h3>Who we are</h3>
+            <p>
+              Founded in 2017, Code With Me brings developers, software engineers, DevOps
+              professionals, cloud engineers, and technology enthusiasts together to learn,
+              build, and grow. Our meetup is centered on the exchange of ideas in software
+              engineering — whether you're looking to <strong>learn</strong> or
+              <strong>teach</strong>, you'll find a supportive environment here.
+            </p>
+          </div>
+
+          <div class="about-card reveal">
+            <span class="about-icon" aria-hidden="true">🎯</span>
+            <h3>Our mission</h3>
+            <p>To make technical learning <strong>accessible, collaborative, and free</strong> for everyone in the NoVA &amp; DC tech scene.</p>
+          </div>
+
+          <div class="about-card reveal">
+            <span class="about-icon" aria-hidden="true">🛠️</span>
+            <h3>What we host</h3>
+            <p>Technical talks, hands-on workshops, live coding sessions, debugging exercises, and networking events — often with companies like <strong>Amazon Web Services</strong>.</p>
+          </div>
+
+          <div class="about-card reveal">
+            <span class="about-icon" aria-hidden="true">💛</span>
+            <h3>Our culture</h3>
+            <p>We believe in the power of <strong>pair programming</strong> and fostering a culture of <strong>kindness</strong> — everyone feels welcome and is supported.</p>
+          </div>
+
+          <div class="about-card reveal">
+            <span class="about-icon" aria-hidden="true">🚀</span>
+            <h3>Why members love it</h3>
+            <p>Explore new languages, techniques, and toolkits — and see what's <strong>"hot" in the market</strong> right now, connecting you with local companies.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHAT WE DO ============ -->
+    <section class="section section-alt" id="what-we-do">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-eyebrow">What We Do</p>
+          <h2>Ways to show up <span class="grad-text">and level up</span>.</h2>
+          <p class="section-sub">Every event is hands-on, in-person, and free. Pick your flavor.</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature reveal">
+            <div class="feature-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2a4 4 0 0 1 4 4v.5h1a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3v-6a3 3 0 0 1 3-3h1V6a4 4 0 0 1 4-4z"/><path d="M12 11v3l2 2" stroke-linecap="round"/></svg></div>
+            <h3>Technical Talks</h3>
+            <p>Hear from engineers and industry leaders — from cutting-edge frameworks to career insights and market trends.</p>
+          </article>
+
+          <article class="feature reveal">
+            <div class="feature-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.4 2.4-2.3-.7-.7-2.3 2.4-2.4z" stroke-linejoin="round"/></svg></div>
+            <h3>Hands-On Workshops</h3>
+            <p>Dig into real toolkits and techniques with guided, practical sessions — build something while you learn.</p>
+          </article>
+
+          <article class="feature reveal">
+            <div class="feature-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M13 5l-2 14" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3>Live Coding</h3>
+            <p>Code together in real time. Watch, question, and participate as problems are solved on the spot.</p>
+          </article>
+
+          <article class="feature reveal">
+            <div class="feature-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="m9 9 6 6M15 9l-6 6" stroke-linecap="round"/></svg></div>
+            <h3>Debugging Exercises</h3>
+            <p>Sharpen your problem-solving skills in collaborative debugging drills — a great way to learn by doing.</p>
+          </article>
+
+          <article class="feature reveal">
+            <div class="feature-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="3.2"/><path d="M2.8 19a6.2 6.2 0 0 1 12.4 0M16 5.6a3.2 3.2 0 0 1 0 4.8M18.6 19a6.2 6.2 0 0 0-3.2-5.3" stroke-linecap="round"/></svg></div>
+            <h3>Networking Events</h3>
+            <p>Meet your next teammate, mentor, or hiring manager. Connecting with local companies is part of what we're about.</p>
+          </article>
+
+          <article class="feature reveal">
+            <div class="feature-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zM2.5 20a5.5 5.5 0 0 1 11 0M15.5 4.6a3.5 3.5 0 0 1 0 6.2M17.5 14.7a5.5 5.5 0 0 1 4 5.3" stroke-linecap="round"/></svg></div>
+            <h3>Pair Programming</h3>
+            <p>A core value of our community. Learn faster, write better code, and support each other — one pair at a time.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EVENTS ============ -->
+    <section class="section" id="events">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-eyebrow">Events</p>
+          <h2>Upcoming <span class="grad-text">gatherings</span>.</h2>
+          <p class="section-sub">In-person, free, and open to all experience levels. Full schedule lives on our Meetup — this is a taste.</p>
+        </div>
+
+        <div class="events-grid" id="events-grid" data-static>
+          <article class="event-card reveal">
+            <div class="event-head">
+              <div class="event-date" data-month="SEP"><span class="d">28</span><span class="m">Sept</span></div>
+              <div><h3>Live Coding &amp; Debug Night</h3><p class="event-loc">📍 Northern Virginia</p></div>
+            </div>
+            <p class="event-desc">Bring a laptop and a stubborn bug. We debug together, share war stories, and end with open networking.</p>
+            <div class="event-tags"><span>Talk</span><span>Live Coding</span><span>Networking</span></div>
+            <a class="event-link" href="https://www.meetup.com/code-with-me/" target="_blank" rel="noopener">Details on Meetup →</a>
+          </article>
+
+          <article class="event-card reveal">
+            <div class="event-head">
+              <div class="event-date" data-month="OCT"><span class="d">16</span><span class="m">Oct</span></div>
+              <div><h3>Cloud &amp; DevOps Meetup with Partners</h3><p class="event-loc">📍 Washington, DC</p></div>
+            </div>
+            <p class="event-desc">Technical talks on cloud architectures and DevOps practices from industry partners, followed by Q&amp;A and demos.</p>
+            <div class="event-tags"><span>Cloud</span><span>DevOps</span><span>Talks</span></div>
+            <a class="event-link" href="https://www.meetup.com/code-with-me/" target="_blank" rel="noopener">Details on Meetup →</a>
+          </article>
+
+          <article class="event-card reveal">
+            <div class="event-head">
+              <div class="event-date" data-month="NOV"><span class="d">07</span><span class="m">Nov</span></div>
+              <div><h3>Workshop: Learn a New Toolkit</h3><p class="event-loc">📍 Northern Virginia</p></div>
+            </div>
+            <p class="event-desc">A hands-on, beginner-friendly session exploring a new language or toolkit — all learning, zero judgment.</p>
+            <div class="event-tags"><span>Workshop</span><span>Hands-On</span><span>All Levels</span></div>
+            <a class="event-link" href="https://www.meetup.com/code-with-me/" target="_blank" rel="noopener">Details on Meetup →</a>
+          </article>
+        </div>
+
+        <div class="events-cta reveal">
+          <p>These are representative events. <strong>Register and see the live schedule:</strong></p>
+          <a href="https://www.meetup.com/code-with-me/" class="btn btn-primary" target="_blank" rel="noopener">View All Events on Meetup →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PARTNERS ============ -->
+    <section class="section section-alt" id="partners">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-eyebrow">Partners</p>
+          <h2>Collaborating with the companies <span class="grad-text">shaping the region</span>.</h2>
+          <p class="section-sub">We've worked with 12+ companies to bring the community up to date on what's hot in the market.</p>
+        </div>
+
+        <div class="partner-row reveal">
+          <div class="partner-logo">aws <small>Amazon Web Services</small></div>
+          <div class="partner-logo">cloud <small>Cloud Engineering</small></div>
+          <div class="partner-logo">devops <small>DevOps Teams</small></div>
+          <div class="partner-logo">12+ <small>Partner Companies</small></div>
+        </div>
+
+        <div class="sponsor-cta reveal">
+          <div>
+            <h3>Company looking to sponsor?</h3>
+            <p>Host an event, share a talk, or meet the next generation of NoVA &amp; DC tech talent. It's free for the community — and great for your brand.</p>
+          </div>
+          <a href="mailto:?subject=Sponsorship%20with%20Code%20With%20Me" class="btn btn-primary">Explore Sponsorship</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GET INVOLVED ============ -->
+    <section class="section" id="get-involved">
+      <div class="container">
+        <div class="section-head center reveal">
+          <p class="section-eyebrow">Get Involved</p>
+          <h2>The community needs <span class="grad-text">you</span>.</h2>
+          <p class="section-sub">Whether you're a company looking to sponsor, a speaker eager to share expertise, or a member with an idea — all are welcome to contribute.</p>
+        </div>
+
+        <div class="involve-grid">
+          <a class="involve-card reveal" href="https://www.meetup.com/code-with-me/" target="_blank" rel="noopener">
+            <span class="involve-ico" aria-hidden="true">🙋</span>
+            <h3>Attend an Event</h3>
+            <p>Free, in-person, and open to all experience levels. Grab a seat, learn, and meet people.</p>
+            <span class="involve-arrow">Join on Meetup →</span>
+          </a>
+
+          <a class="involve-card reveal" href="mailto:?subject=Speaking%20at%20Code%20With%20Me">
+            <span class="involve-ico" aria-hidden="true">🎤</span>
+            <h3>Speak or Run a Session</h3>
+            <p>Have a talk, workshop, or live-coding idea? We'd love to help you share it with the region.</p>
+            <span class="involve-arrow">Propose a topic →</span>
+          </a>
+
+          <a class="involve-card reveal" href="mailto:?subject=Sponsoring%20Code%20With%20Me">
+            <span class="involve-ico" aria-hidden="true">🤝</span>
+            <h3>Sponsor or Host</h3>
+            <p>Support free technical learning in NoVA &amp; DC and connect directly with local talent.</p>
+            <span class="involve-arrow">Partner with us →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA BAND ============ -->
+    <section class="cta-band">
+      <div class="container reveal">
+        <h2>Smarter &nbsp;Together.</h2>
+        <p>Join a community that's been building together since 2017.</p>
+        <div class="hero-cta center-cta">
+          <a href="https://www.meetup.com/code-with-me/" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Become a Member — It's Free</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#top" class="brand">
+          <span class="brand-mark" aria-hidden="true"><code>&lt;/&gt;</code></span>
+          <span class="brand-text">Code&nbsp;With&nbsp;Me</span>
+        </a>
+        <p>Bringing developers, engineers, and tech enthusiasts across Northern Virginia &amp; Washington, DC together to learn, build, and grow. Free. In-person. Smarter together.</p>
+        <p class="footer-motto"><code>Smarter&nbsp;Together.</code> — est. 2017</p>
+      </div>
+
+      <nav class="footer-col" aria-label="Footer — Explore">
+        <h4>Explore</h4>
+        <a href="#about">About</a>
+        <a href="#what-we-do">What We Do</a>
+        <a href="#events">Events</a>
+        <a href="#partners">Partners</a>
+        <a href="#get-involved">Get Involved</a>
+      </nav>
+
+      <div class="footer-col">
+        <h4>Community</h4>
+        <a href="https://www.meetup.com/code-with-me/" target="_blank" rel="noopener">Meetup Profile</a>
+        <a href="https://www.meetup.com/code-with-me/events/" target="_blank" rel="noopener">Event Calendar</a>
+        <a href="mailto:?subject=Speaking%20at%20Code%20With%20Me">Speak With Us</a>
+        <a href="mailto:?subject=Sponsoring%20Code%20With%20Me">Sponsorship</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© <span id="year"></span> Code With Me · Northern Virginia &amp; Washington, DC · Made with 💛 by the community, for the community.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
